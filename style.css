@@ -1,0 +1,509 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+@font-face {
+    font-family: 'GreatLakes';
+    src: url(fuentes/GreatLakesNF.ttf);
+}
+.nav-responsive,
+.contenido__responsive,
+.footer-responsive,
+.preguntas__responsive,
+.contenido-carro-responsive,
+.tabla-responsive{
+    display: none;
+}
+.video-container{
+    width: 100%;    
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    background-color: dimgray;
+}
+video{
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -50;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 10%;
+    position: absolute;
+    z-index: 100;
+    margin-left: 30%;
+    /* background-color: aquamarine; */
+}
+.grid-item{
+   text-align: center;
+   /* border: 3px solid black; */
+}
+.logo-bad{
+    grid-column: 1/3;
+    font-family: 'GreatLakes';
+    font-size: 10em;
+    text-align: center;
+}
+.logo-des{
+    grid-column: 1/3;
+    font-family: 'GreatLakes';
+    font-size: 6em;
+    text-align: center;
+    position: relative;
+    top: -30%;
+}
+.boton-nov,
+.boton-cat{
+    grid-row: 3/4;
+    text-decoration: none;
+    color: black;
+    /* border: 2px solid blueviolet; */
+    width: auto;
+    align-content: center;
+}
+.grid-container a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0 20px;
+    padding: 5px;
+    border: 2px solid black;
+    font-size: 1.1em;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 700;
+    overflow: hidden;
+    position: relative;
+    transition: color .5s .25s;
+    border-radius: 20px;
+    text-align: center;  
+}
+.botones__boton::before,
+.botones__boton::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.993);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform .5s cubic-bezier(.785, .135, .15, .86);
+}
+.botones__boton::before{
+    left: 0;
+    transform-origin: left;
+}
+.botones__boton::after{
+    right: 0;
+    transform-origin: right;
+}
+.botones__boton:hover::before,
+.botones__boton:hover::after{
+    transform: scaleX(1);
+}
+.botones__boton:hover{
+    color: rgb(255, 255, 255);
+    transition-delay: .1s;
+}
+footer{
+    display: flex;
+    background-color: dimgray;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.iconos img{
+    width: 40px;
+    height: 40px;
+    margin: 20px;    
+}
+.navegables ul{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    list-style: none;
+    margin-right: 20px;
+    line-height: 120%;
+}
+.navegables a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 700;
+}   
+footer p{
+    font-family: 'Anek Malayalam', sans-serif;
+}
+/* Novedades */
+
+body{
+    background-image: url(/multi/img/background.jpg);
+}
+
+
+
+
+
+.nav{
+    display: grid;
+    grid-template-columns: 10% 20% 1fr 10%;
+    align-items: center;
+    background-color: dimgray;
+    width: 100vw;
+    /* border: 1px solid black; */
+}
+/* .item{
+    border: #000000 3px solid;
+} */
+
+
+.borger{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    justify-self: center;
+    /* border: 1px solid black; */
+}
+
+.borger .line{
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #000000;
+    margin-block: 10px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+.borger:active .line:nth-child(1){
+    transform: translateY(13px) rotate(45deg);
+}
+.borger:active .line:nth-child(2){
+    opacity: 0;
+}
+.borger:active .line:nth-child(3){
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.nav__logo,
+.nav__carro{
+    height: 60px;
+    /* border: #000000 1px solid; */
+}
+
+.nav__searchbar{
+    height: 20px;
+    /* border: solid 1px dimgray; */
+    font-size: 17px;
+    text-decoration: none;
+    justify-self: center;
+}
+
+.nav__logo{
+    justify-self: left;
+    margin-left: 29%;
+}
+
+.contenido{
+    display: grid;
+    margin: 30px;
+    width: auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 5vw;
+    justify-items: center ;
+    /* border: 2px solid rgb(0, 0, 0); */
+
+}
+
+.contenido div{
+    /* border: 2px solid rgba(0, 0, 0, 0.349); */
+    width: fit-content;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    outline: 1px solid rgba(255, 255, 255, .5);
+    outline-offset: -8px;
+    box-shadow: 3px 3px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.contenido__remeras{
+    width: 350px;
+    height: 400px;
+    /* position: absolute; */
+    inset: 0;
+    object-fit: cover;
+    opacity: .8;
+    transition: transform .75s;
+}
+.contenido div:hover .contenido__remeras{
+    transform: scale(1.15);
+}
+.contenido__subtitulo,
+.contenido__titulo{
+    position: relative;   
+    background-color: rgba(51, 51, 51, 0.616);
+
+}
+.contenido__titulo{
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+   
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+.contenido__subtitulo{
+    font-family: 'Anek Malayalam', sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.contenido input{
+    background-color: rgb(146, 145, 145);
+    width: 120px;
+    height: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 700;
+    transition: width 50ms, height 50ms;
+}
+
+.contenido input:hover{
+    width: 140px;
+}
+
+
+/* Media querys */
+
+@media only screen and (max-width: 600px){
+    .contenido{
+        display: none;
+    }
+    .contenido__responsive{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        gap: 20px;
+        text-align: center;
+        justify-items: center;
+        
+    }
+    .contenido__remeras__responsive {
+        width: 80%;
+        height: 300px;
+    }
+    footer{
+        display: none;
+    }
+    .footer-responsive{
+        display: flex;
+        justify-items: center;
+        position: relative;
+    }
+    .footer-responsive .iconos img{
+        width: 25%;
+        height: 25%;
+        margin-left: 10px;
+    }
+    .footer-responsive .iconos{
+        width: 200px;
+    }
+    .footer-responsive .navegables a{
+        font-size: 12px;
+        text-align: center;       
+    }
+    .footer-responsive p{
+        font-size: 12px;
+    }
+    .nav{
+        display: none
+    }
+    .nav-responsive{
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 1fr;
+        align-items: center;
+        background-color: dimgray;
+        justify-items: space;
+        width: 100vw;
+    }
+
+    .preguntas input,
+    .preguntas p{
+        display: none;
+    }
+    .preguntas__responsive{
+        display: grid;
+        font-size: 24px;
+        font-family: 'Anek Malayalam', sans-serif;
+        font-weight: 600;
+        /* border: 2px solid dimgray; */
+        gap: 30px;
+        margin: 20% 5%;
+        position: relative;
+        
+    }
+    .preguntas__boton__responsive{
+        height: 30px;
+        border: 2px solid dimgray;
+        transition: color 1s;
+        
+    }
+    .preguntas__boton__responsive:hover{
+        background-color: rgb(211, 211, 211);
+     }
+    .preguntas__responsive__respuesta{
+        font-size: 20px;
+    }
+
+    .contenido-carro{
+        visibility: hidden;
+        position: absolute;
+    }
+    .contenido-carro-responsive{
+        display: grid;
+        grid-template-columns: 80% 1fr;
+        grid-template-rows: auto auto auto;
+        border: 1px solid dimgray;
+        margin: 10% 0;
+        align-items: center;
+        background-color: rgba(105, 105, 105, 0.459);
+    }
+    .contenido-carro-responsive img{
+        height: 100px;
+    }
+    .contenido-carro-responsive p{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: right;
+        margin: 5%;
+    }
+    .tabla{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .tabla img{
+        display: none;
+    }
+    .tabla-responsive{
+        display: grid;
+        width: 100vw;
+        gap: 20px;
+        margin-top: 30px;
+        margin: 10% 0;
+        align-items: center;
+    }
+    .tabla__botones__responsive{
+        height: 20px;
+        width: 100vw;
+        border: 2px solid dimgray;
+        transition: color 1s;
+    }
+    .tabla__botones__responsive:hover{
+        background-color: rgb(211, 211, 211);
+     }
+    .tabla__medidas__responsive{
+        width: 100vw;
+    }
+}    
+
+
+/* Preguntas frecuentes */
+
+.preguntas{
+    display: grid;
+    margin: 10% 25%;
+    gap: 30px;
+        
+}
+
+.preguntas__boton{
+    font-size: 36px;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 600;
+    border: 2px solid dimgray;
+    transition: color 1s;
+}
+
+.preguntas__boton:hover{
+   background-color: rgb(211, 211, 211);
+}
+
+.preguntas p{
+    font-size: 24px;
+    font-family: 'Anek Malayalam', sans-serif;
+}   
+
+/* Carro */
+
+.contenido-carro{
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    grid-template-rows: repeat(1, 150px);    
+    border: #000000 1px solid;
+    margin: 5% 25%;
+    background-color: rgba(51, 51, 51, 0.418);
+}
+.contenido-carro img{
+    height: 150px;
+    width: 100%;
+    /* display: none; */
+}
+.contenido-carro div{
+    border: 2px solid black;
+    justify-items: center;
+    font-family: 'Anek Malayalam', sans-serif;
+    text-align: right;
+    
+}
+.contenido-carro p{
+    margin: 35px;
+    font-weight: 600;
+    text-justify: center;
+}
+
+/* Tabla medidas */
+
+.tabla{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    width: 40%;
+    margin: 10% 30% 5%;
+    gap: 40px;
+    justify-items: center;
+
+}
+
+.tabla__medidas{
+    grid-column: 1/5;
+}
+
+.tabla__botones{
+    width: 90px;
+    height: 30px;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 600;    
+}
+
