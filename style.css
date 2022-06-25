@@ -179,7 +179,7 @@ video{
 
 
 .footer-basic {
-    padding:20px 0;
+    padding:10px 0;
     background-color:dimgray;
     color:#fafafa;
   }
@@ -245,69 +245,17 @@ body{
     background-image: url(/multi/img/background.jpg);
 }
 
-
-
-
-
-.nav{
-    display: grid;
-    grid-template-columns: 10% 20% 1fr 10%;
-    align-items: center;
-    background-color: dimgray;
-    width: 100vw;
-    /* border: 1px solid black; */
-}
-/* .item{
-    border: #000000 3px solid;
-} */
-
-
-.borger{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    justify-self: center;
-    /* border: 1px solid black; */
-}
-
-.borger .line{
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #000000;
-    margin-block: 10px;
-    border-radius: 4px;
-    transition: transform .5s, opacity .25s;
-}
-
-.borger:active .line:nth-child(1){
-    transform: translateY(13px) rotate(45deg);
-}
-.borger:active .line:nth-child(2){
-    opacity: 0;
-}
-.borger:active .line:nth-child(3){
-    transform: translateY(-13px) rotate(-45deg);
-}
-
-.nav__logo,
-.nav__carro{
-    height: 60px;
-    /* border: #000000 1px solid; */
-}
-
 .nav__searchbar{
     height: 20px;
-    /* border: solid 1px dimgray; */
     font-size: 17px;
     text-decoration: none;
     justify-self: center;
 }
 
 .nav__logo{
-    justify-self: left;
-    margin-left: 29%;
+    height: 40px;
+    margin: 0 5%;
+
 }
 
 .contenido{
@@ -318,12 +266,9 @@ body{
     grid-template-rows: repeat(2,1fr);
     gap: 5vw;
     justify-items: center ;
-    /* border: 2px solid rgb(0, 0, 0); */
-
 }
 
 .contenido div{
-    /* border: 2px solid rgba(0, 0, 0, 0.349); */
     width: fit-content;
     text-align: center;
     background-color: #333;
@@ -341,7 +286,6 @@ body{
 .contenido__remeras{
     width: 350px;
     height: 400px;
-    /* position: absolute; */
     inset: 0;
     object-fit: cover;
     opacity: .8;
