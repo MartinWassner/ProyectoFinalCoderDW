@@ -21,7 +21,7 @@
     overflow: hidden;
     position: relative;
     height: auto;
-    background-color: dimgray;
+    background-color: rgb(34, 34, 34);
 }
 video{
     min-width: 100%;
@@ -127,7 +127,7 @@ video{
 .boton-cat{
     grid-row: 3/4;
     text-decoration: none;
-    color: black;
+    color: rgb(34, 34, 34);
     /* border: 2px solid blueviolet; */
     width: auto;
     align-content: center;
@@ -155,7 +155,7 @@ video{
     top: 0;
     width: 50%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.993);
+    background-color:rgb(34, 34, 34);;
     z-index: -1;
     transform: scaleX(0);
     transition: transform .5s cubic-bezier(.785, .135, .15, .86);
@@ -180,7 +180,7 @@ video{
 
 .footer-basic {
     padding:10px 0;
-    background-color:dimgray;
+    background-color:rgb(34, 34, 34);
     color:#fafafa;
   }
   
@@ -244,14 +244,6 @@ video{
 body{
     background-image: url(/multi/img/background.jpg);
 }
-
-.nav__searchbar{
-    height: 20px;
-    font-size: 17px;
-    text-decoration: none;
-    justify-self: center;
-}
-
 .nav__logo{
     height: 40px;
     margin: 0 5%;
@@ -280,12 +272,9 @@ body{
     overflow: hidden;
 }
 
-
-
-
 .contenido__remeras{
-    width: 350px;
-    height: 400px;
+    width: 300px;
+    height: 350px;
     inset: 0;
     object-fit: cover;
     opacity: .8;
@@ -304,7 +293,7 @@ body{
     text-align: center;
     font-weight: 600;
     font-size: 24px;
-   
+    color: rgb(0, 0, 0);
     font-family: 'Anek Malayalam', sans-serif;
 }
 
@@ -312,6 +301,7 @@ body{
     font-family: 'Anek Malayalam', sans-serif;
     text-align: center;
     padding-top: 10px;
+    color: rgb(0, 0, 0);
 }
 
 .contenido input{
@@ -322,6 +312,7 @@ body{
     border-radius: 10px;
     font-family: 'Anek Malayalam', sans-serif;
     font-weight: 700;
+    font-size: 12px;
     transition: width 50ms, height 50ms;
 }
 
