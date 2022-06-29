@@ -179,10 +179,10 @@ video{
 
 
 .footer-basic {
-    padding:10px 0;
+    padding:3px 0;
     background-color:rgb(34, 34, 34);
     color:#fafafa;
-  }
+}
   
   .footer-basic ul {
     padding:0;
@@ -244,6 +244,7 @@ video{
 body{
     background-image: url(/multi/img/background.jpg);
 }
+
 .nav__logo{
     height: 40px;
     margin: 0 5%;
@@ -262,7 +263,7 @@ body{
 }
 
 .contenido div{
-    width: fit-content;
+    width: 20rem;
     text-align: center;
     background-color: #333;
     border-radius: 10px;
@@ -274,7 +275,7 @@ body{
 }
 
 .contenido__remeras{
-    width: 300px;
+    width: fit-content;
     height: 350px;
     inset: 0;
     object-fit: cover;
@@ -341,42 +342,7 @@ body{
         width: 80%;
         height: 300px;
     }
-    footer{
-        display: none;
-    }
-    .footer-responsive{
-        display: flex;
-        justify-items: center;
-        position: relative;
-    }
-    .footer-responsive .iconos img{
-        width: 25%;
-        height: 25%;
-        margin-left: 10px;
-    }
-    .footer-responsive .iconos{
-        width: 200px;
-    }
-    .footer-responsive .navegables a{
-        font-size: 12px;
-        text-align: center;       
-    }
-    .footer-responsive p{
-        font-size: 12px;
-    }
-    .nav{
-        display: none
-    }
-    .nav-responsive{
-        display: grid;
-        grid-template-columns: 20% 1fr 20%;
-        grid-template-rows: 1fr;
-        align-items: center;
-        background-color: dimgray;
-        justify-items: space;
-        width: 100vw;
-    }
-
+    
     .preguntas input,
     .preguntas p{
         display: none;
@@ -460,30 +426,13 @@ body{
 
 /* Preguntas frecuentes */
 
-.preguntas{
-    display: grid;
-    margin: 10% 25%;
-    gap: 30px;
-        
+.accordion-flush{
+    margin: 5rem 0;
+    height: 60vh;
 }
-
-.preguntas__boton{
-    font-size: 36px;
-    font-family: 'Anek Malayalam', sans-serif;
-    font-weight: 600;
-    border: 2px solid dimgray;
-    transition: color 1s;
+.accordion-button{
+    font-family: 'Anek Malayalam', sans-serif; 
 }
-
-.preguntas__boton:hover{
-   background-color: rgb(211, 211, 211);
-}
-
-.preguntas p{
-    font-size: 24px;
-    font-family: 'Anek Malayalam', sans-serif;
-}   
-
 /* Carro */
 
 .contenido-carro{
